@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEON_NET // HOME</title>
+    <style>
+        :root {
+            --bg-color: #0a0a12;
+            --neon-cyan: #00f0ff;
+            --neon-magenta: #ff0055;
+            --neon-yellow: #fcee0a;
+            --text-color: #e0e0ff;
+            --panel-bg: rgba(16, 16, 28, 0.75);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Cyberpunk Grid Background */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: 
+                linear-gradient(rgba(0, 240, 255, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 240, 255, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-position: center;
+            z-index: -1;
+        }
+
+        /* Main Menu Container */
+        .menu-container {
+            background: var(--panel-bg);
+            border: 2px solid var(--neon-cyan);
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.2), inset 0 0 15px rgba(0, 240, 255, 0.1);
+            border-radius: 4px;
+            position: relative;
+        }
+
+        /* Tech Corners Decor */
+        .menu-container::before {
+            content: "SYSTEM_ONLINE";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--bg-color);
+            padding: 0 10px;
+            font-size: 11px;
+            color: var(--neon-yellow);
+            letter-spacing: 2px;
+        }
+
+        /* Glitch Header */
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: #fff;
+            text-shadow: 3px 3px var(--neon-magenta), -3px -3px var(--neon-cyan);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        /* Menu Navigation */
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Cyberpunk Buttons */
+        .nav-btn {
+            display: block;
+            text-align: center;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: var(--neon-cyan);
+            background: transparent;
+            border: 1px solid var(--neon-cyan);
+            position: relative;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            clip-path: polygon(92% 0, 100% 25%, 100% 100%, 8% 100%, 0% 75%, 0 0);
+        }
+
+        .nav-btn:hover {
+            color: #000;
+            background: var(--neon-cyan);
+            box-shadow: 0 0 15px var(--neon-cyan);
+            text-shadow: none;
+        }
+
+        /* Alternate styled button for variety */
+        .nav-btn.alt {
+            color: var(--neon-magenta);
+            border-color: var(--neon-magenta);
+        }
+
+        .nav-btn.alt:hover {
+            color: #000;
+            background: var(--neon-magenta);
+            box-shadow: 0 0 15px var(--neon-magenta);
+        }
+
+        /* Footer info */
+        .footer-status {
+            margin-top: 30px;
+            font-size: 0.75rem;
+            text-align: center;
+            color: rgba(224, 224, 255, 0.4);
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h1>NET_GATEWAY</h1>
+        
+        <nav>
+            <a href="https://google.com" target="_blank" class="nav-btn">01 // Access Matrix</a>
+            <a href="#" class="nav-btn">02 // Data Haven</a>
+            <a href="#" class="nav-btn alt">03 // Cyberware Shop</a>
+            <a href="#" class="nav-btn">04 // Log Out</a>
+        </nav>
+
+        <div class="footer-status">
+            SECURE_CONNECTION // PORT_8080 // OVERRIDE_READY
+        </div>
+    </div>
+
+</body>
+</html>
